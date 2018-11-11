@@ -1,0 +1,25 @@
+{
+  "name": "classical-music",
+  "version": "1.0.0",
+  "description": "Web application that streams classical music.",
+  "engines": {
+    "node": "10.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wizikal/classical-music.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wizikal/classical-music/issues"
+  },
+  "homepage": "https://github.com/Wizikal/classical-music#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
