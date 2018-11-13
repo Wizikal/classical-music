@@ -15,7 +15,7 @@ audio.addEventListener('ended', () => {
     if (i >= 3) i = 0
     else i++
     song = playlist[i]
-    audio = new Audio(song)
+    audio.src = song
     audio.play()
     console.log(`Song ended! Now playing ${song}!`)
 })
@@ -32,8 +32,10 @@ function skipMusic() {
     if (i >= 3) i = 0
     else i++
     song = playlist[i]
-    audio = new Audio(song)
+    audio.src = song
     audio.play()
     console.log(`Skipped! Now playing ${song}!`)
 }
+
+audio.currentTime = 50
 
