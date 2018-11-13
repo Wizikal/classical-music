@@ -37,5 +37,4 @@ function skipMusic() {
     console.log(`Skipped! Now playing ${song}!`)
 }
 
-audio.currentTime = 50
 
