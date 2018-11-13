@@ -12,7 +12,7 @@ var song = playlist[i]
 var audio = new Audio(song)
 
 audio.addEventListener('ended', () => {
-    if (i >= 2) i = 0
+    if (i >= 3) i = 0
     else i++
     song = playlist[i]
     audio = new Audio(song)
@@ -21,14 +21,15 @@ audio.addEventListener('ended', () => {
 })
 
 // start playing song
-audio.begin = () => {
+function startMusic() {
     audio.play()
     console.log(`Now playing ${song}!`)
 }
 
 // skip current song
-audio.skip = () => {
-    if (i >= 2) i = 0
+function skipMusic() {
+    audio.pause()
+    if (i >= 3) i = 0
     else i++
     song = playlist[i]
     audio = new Audio(song)
