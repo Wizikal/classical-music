@@ -21,13 +21,13 @@ audio.addEventListener('ended', () => {
 })
 
 // start playing song
-function startMusic() {
+audio.begin = () => {
     audio.play()
     console.log(`Now playing ${song}!`)
 }
 
 // skip current song
-function skipMusic() {
+audio.skip = () => {
     if (i >= 2) i = 0
     else i++
     song = playlist[i]
