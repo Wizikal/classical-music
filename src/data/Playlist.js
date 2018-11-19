@@ -7,36 +7,3 @@ const Playlist = [
 ]
 
 export default Playlist
-
-// global variables
-// var i = 0
-// var song = playlist[i]
-// var audio = new Audio(song)
-
-// audio.addEventListener('ended', () => {
-//     if (i >= 3) i = 0
-//     else i++
-//     song = playlist[i]
-//     audio.src = song
-//     audio.play()
-//     console.log(`Song ended! Now playing ${song}!`)
-// })
-
-// start playing song
-// function startMusic() {
-//     audio.play()
-//     console.log(`Now playing ${song}!`)
-// }
-
-// skip current song
-// function skipMusic() {
-//     audio.pause()
-//     if (i >= 3) i = 0
-//     else i++
-//     song = playlist[i]
-//     audio.src = song
-//     audio.play()
-//     console.log(`Skipped! Now playing ${song}!`)
-// }
-
-
