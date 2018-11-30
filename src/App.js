@@ -9,18 +9,29 @@ export default class App extends React.Component {
         this.state = {
             songs: Playlist,
             index: 0,
-            author: "",
-            song: "",
+            author: '',
+            song: '',
+            button: true
         }
         this.audio = new Audio(this.state.songs[this.state.index])
         this.startSong = this.startSong.bind(this)
+        this.pauseSong = this.pauseSong.bind(this)
         this.skipSong = this.skipSong.bind(this)
         this.setName = this.setName.bind(this)
     }
     
     startSong() {
         this.audio.play()
-        console.log(`Started! Now playing ${this.state.songs[this.state.index]}`)
+        this.setState({
+            button: false
+        })
+    }
+
+    pauseSong() {
+        this.audio.pause()
+        this.setState({
+            button: true
+        })
     }
 
     skipSong() {
@@ -32,6 +43,7 @@ export default class App extends React.Component {
                 this.audio.pause()
                 this.audio.src = this.state.songs[this.state.index]
                 this.audio.play()
+                this.setName()
             })
         } else {
             this.setState({
@@ -40,6 +52,7 @@ export default class App extends React.Component {
                 this.audio.pause()
                 this.audio.src = this.state.songs[this.state.index]
                 this.audio.play()
+                this.setName()
             })
         }
         console.log(`Skipped! Now playing ${this.state.songs[this.state.index + 1]}`)
@@ -78,9 +91,11 @@ export default class App extends React.Component {
     render() {
         let author = this.state.author
         let song = this.state.song
+        let button = this.state.button
         return (
             <div>
-                <Song author={author} song={song} play={this.startSong} skip={this.skipSong}/>
+                <Song author={author} song={song} 
+                    play={this.startSong} pause={this.pauseSong} skip={this.skipSong} button={button}/>
             </div>
         )
     }

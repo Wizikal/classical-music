@@ -1,15 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
 .song {
-    text-align: center
+    font-family: 'Dosis', sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 0.2em;
 }
 
 .author {
-    text-align: center
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.buttons {
+    text-align: center;
+    margin-bottom: 20em;
+}
+
+button:focus {
+    outline: 0 !important;
 }
 
 .play {
-    text-align: center
+    background-color: transparent;
+    background-image: url('../../public/play.svg');
+    background-size: 6em 6em;
+    border: none;
+    display: inline-block;
+    height: 6em;
+    margin: 10px 25px 0px 0px;
+    width: 6em;
+}
+
+.pause {
+    background-color: transparent;
+    background-image: url('../../public/pause.svg');
+    background-size: 6em 6em;
+    border: none;
+    display: inline-block;
+    height: 6em;
+    margin: 10px 25px 0px 0px;
+    width: 6em;
 }
 
 .skip {
-    text-align: center
+    background-color: transparent;
+    background-image: url('../../public/skip.svg');
+    background-size: 6em 6em;
+    border: none;
+    display: inline-block;
+    height: 6em;
+    margin: 10px 0px 0px 25px;
+    width: 6em;
+}
+
+.credit {
+    font-size: 1em;
+    text-align: center;
 }
